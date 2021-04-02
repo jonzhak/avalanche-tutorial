@@ -160,7 +160,7 @@ if(searchParams.get('refAPI_ref_code')){
 ```
 
 ## Sign Up 
-Do all of your suers need to sign in before making a purchase or getting a loan etc etc?
+Do all of your users need to sign in before making a purchase or getting a loan etc etc?
 
 YES => call this Sign Up method right after sign up
 ```
@@ -175,7 +175,8 @@ then call this Sign Up method together with your premiummEvent (described below)
 
 BUt if you're ecommerce etc (anything where not ALL your users are signed in neccesarily) then you can combine 
 
-## Premium event - this is the event that is your 'conversion' event - "if the referred user reaches this point, I want this to be considered a sucesful referral and I want this event to mean that this user or whoever referred them deserves a reward!"
+## Premium event 
+- this is the event that is your 'conversion' event - "if the referred user reaches this point, I want this to be considered a sucesful referral and I want this event to mean that this user or whoever referred them deserves a reward!"
 
 this can be called both frontend (easy) and backend (secure)
 ### frontend 

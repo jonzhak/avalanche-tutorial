@@ -8,9 +8,11 @@ There are 3 main parts to avalanche code you need to install:
 ### 2) UI components (via iframe for web or webview for mobile)
 ### 3) Tracking (grab referral code, track when they sign up, and track when they convert to money making customer)
 
-
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ## (1) Security
 With any interaction you have with Avalanche API, you need to also give us the TOKEN. 

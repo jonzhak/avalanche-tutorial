@@ -155,8 +155,70 @@ if(searchParams.get('refAPI_ref_code')){
 }
 ```
 
+##Sign Up 
+Do all of your suers need to sign in before making a purchase or getting a loan etc etc?
 
-##Premium event - this is the event that is your 'conversion' event - 'if the referred user reaches this point, I want this to be considered a sucesful referral and I want this event to mean that 
+YES => call this Sign Up method right after sign up
+```
+avalancheBrowser.signUpMyAppSdk({ email: email, authReferApiToken: token  });
+```
+
+--this is assuming that you already stored the referral code as a cookie called refAPI_ref_code
+
+
+NO, not all, some can buy etc without signing in => 
+then call this Sign Up method together with your premiummEvent (described below) - specifically, right before your premiumEvent call, in a series like this:  signUpEvent THEN premiumEvent. Code is the same as above
+
+BUt if you're ecommerce etc (anything where not ALL your users are signed in neccesarily) then you can combine 
+
+##Premium event - this is the event that is your 'conversion' event - "if the referred user reaches this point, I want this to be considered a sucesful referral and I want this event to mean that this user or whoever referred them deserves a reward!"
+
+this can be called both frontend (easy) and backend (secure)
+-frontend:
+avalancheBrowser.premiumEventMyAppSdkV2({ email: 'amote1234@mail.ru', token: token, authReferApiToken: token });
+					resultier.then(response => {
+						console.log('response', response)
+					}).catch(error => {
+						console.log('error', error)
+					}).finally(finals => {
+						console.log('finals', finals)
+					})
+where token is token we get from (1) security section. note, it's async, so make sure to await for getToken, then call this	
+					
+###backend JS
+avalancheApi.premiumEventMyAppSdkV2({ email: 'amote1234@mail.ru', token: token, authReferApiToken: token });
+					resultier.then(response => {
+						console.log('response', response)
+					}).catch(error => {
+						console.log('error', error)
+					}).finally(finals => {
+						console.log('finals', finals)
+					})
+					
+where token is token we get from (1) security section. note, it's async, so make sure to await for getToken, then call this
+
+
+###backend Python
+```
+url = 'http://salty-reef-38656.herokuapp.com//events/premium_event'
+body = {
+    'email': 'your@user.email'
+}
+# headers for json response
+headers = {'Content-type': 'application/json', 'authorization': token}
+
+r = requests.post(url, data=json.dumps(body), headers=headers)
+```
+where token is token from the Security section
+
+
+
+
+..and you;re all set!
+
+Feel free to send us an email: elezhan@use-avalanche.com
+OR you can also whatsapp our customer support team +7 776 125 06 28   link: wa.me/77761250628
+
 
 
 

@@ -103,7 +103,8 @@ const [showIframe, setShowIframe] = useState(false);
 and set ShowIframe(true) once your token is returned
 
 
-```{showIframe && authToken &&
+```
+{showIframe && authToken &&
           <iframe 
             sandbox="allow-top-navigation allow-scripts allow-same-origin allow-forms" 
             height="500px" 

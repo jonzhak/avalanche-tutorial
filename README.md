@@ -249,8 +249,8 @@ avalancheApi.premiumEventMyAppSdkV2({ email: 'amote1234@mail.ru', token: token, 
 ```
 where token is token we get from (1) security section. note, it's async, so make sure to await for getToken, then call this
 
-<br />
 ### backend Python for premium event
+
 ```
 url = 'http://salty-reef-38656.herokuapp.com//events/premium_event'
 body = {
@@ -261,14 +261,14 @@ headers = {'Content-type': 'application/json', 'authorization': token}
 
 r = requests.post(url, data=json.dumps(body), headers=headers)
 ```
+
 where token is token from the Security section
 
 
 
 
 
-
-..and you;re all set!
+# ..and you;re all set!
 
 Feel free to send us an email: elezhan@use-avalanche.com
 OR you can also whatsapp our customer support team +7 776 125 06 28   link: wa.me/77761250628

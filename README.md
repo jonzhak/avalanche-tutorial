@@ -177,9 +177,8 @@ uri = `https://refer-ui-two.vercel.app/?email=${email}&name=${name}&base_url=${l
 
 # (3) tracking functionality
 ### Our tracking functionality consists of 2 functions (signUp and premiumEvent) + 1 helper function (that turns refAPI_ref_code in url params to cookie)
-<br />
-<br />
-<br />
+
+
 ## Helper function - retrieving the referral code from URL search parameters - 
 when someone clicks on share via or email...we will send their friend a a link, which will have at the end amazingstartup.com?refAPI_ref_code=xyz... and this ref_api_code is their referral code which is used to track who invited them
 

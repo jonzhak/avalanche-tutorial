@@ -146,13 +146,7 @@ For Mobile - use webview
               size='large'
               style={styles.flexContainer}
             />
-          )}
-          ref={webviewRef}
-          onNavigationStateChange={navState => {
-            setCanGoBack(navState.canGoBack)
-            setCanGoForward(navState.canGoForward)
-            setCurrentUrl(navState.url)
-          }}
+          )}          
         />
 
 uri = `https://refer-ui-two.vercel.app/?email=${email}&name=${name}&base_url=${link-to-app-in-appstore}&token=${authToken}`;

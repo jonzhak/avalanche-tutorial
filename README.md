@@ -276,4 +276,47 @@ OR you can also whatsapp our customer support team +7 776 125 06 28   link: wa.m
 
 
 
+```
+const signUpAvalanche = async () => {
+	return axios.post("http://salty-reef-38656.herokuapp.com/events/sign_up_by_email", 
+	{
+		referral_code: refCode,
+		email: user.email
+	},
+	{ headers: { "content-type": "application/json", "Authorization": token } })
+ .then(response => {
+     return response.data.token
+  })
+ .catch((error) => {
+     return {}
+  });
+}
+const PremiumEventAvalanche = async () => {
+	return axios.post("http://salty-reef-38656.herokuapp.com/events/premium_event", 
+	{
+		email: user.email
+	},
+	{ headers: { "content-type": "application/json", "Authorization": token } })
+ .then(response => {
+     return response.data.token
+  })
+ .catch((error) => {
+     return {}
+  });
+}
+Igor rykin11:22 AM
+const GiveReward = async () => {
+	return axios.post("http://salty-reef-38656.herokuapp.com/events/v2/give_reward", 
+	{
+		email: user.email
+	},
+	{ headers: { "content-type": "application/json", "Authorization": token } })
+ .then(response => {
+     return response.data.token
+  })
+ .catch((error) => {
+     return {}
+  });
+}
+```
 

@@ -285,7 +285,7 @@ const signUpAvalanche = async () => {
 	},
 	{ headers: { "content-type": "application/json", "Authorization": token } })
  .then(response => {
-     return response.data.token
+     return response.data
   })
  .catch((error) => {
      return {}
@@ -298,7 +298,7 @@ const PremiumEventAvalanche = async () => {
 	},
 	{ headers: { "content-type": "application/json", "Authorization": token } })
  .then(response => {
-     return response.data.token
+     return response.data
   })
  .catch((error) => {
      return {}
@@ -312,7 +312,7 @@ const GiveReward = async () => {
 	},
 	{ headers: { "content-type": "application/json", "Authorization": token } })
  .then(response => {
-     return response.data.token
+     return response.data
   })
  .catch((error) => {
      return {}

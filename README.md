@@ -351,3 +351,25 @@ const GiveReward = async () => {
 }
 ```
 
+
+
+
+
+```
+
+export const getReferrals = async (
+  email = userMail()
+  //inputToken = localStorage.getItem("auth_token"),
+) => {
+  let url = `${baseApiUrl}/users_with_premium?email=${email}`;
+  url = url.replace("//users_with_premium", "/users_with_premium");
+  const token = await getAuthToken();
+  const resp = await axios.get(url, {
+    headers: {
+      Authorization: token,
+    },
+  });
+  return resp.data;
+};
+
+```
